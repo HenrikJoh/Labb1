@@ -13,7 +13,7 @@ let food = [{
 {
     name: "Pasta",
     price: "200kr",
-    description: "good pasta",
+    description: "Good pasta",
     url: "pasta.jpg"
 }];
 
