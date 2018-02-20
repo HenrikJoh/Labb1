@@ -61,7 +61,7 @@ let pastaBtn = document.getElementById('btnpasta');
 
 let test = 1;
 
-let cartArr = [];
+//let cartArr = [];
 
 /*
     FUNKAR MEN SKIT!
@@ -100,43 +100,23 @@ pastaBtn.addEventListener('click', () => {
    
     
 }); */
-
-
-/* function productArr(e) {
-  
-    console.log(this === e.target);
-    
+let cartArr = [];
+let buttons = document.querySelectorAll('button');
+function addCart() {
+   
+    let item = document.getElementById('cart-items').innerHTML = test;
+    if(this === btnburger) {
+        cartArr.push('Burger');
+        test++;
+        
+    }else if (this === btnpizza){
+        cartArr.push('Pizza');
+        test++
+    }
+    else if(this === btnpasta){
+        cartArr.push('Pasta');
+        test++
+    }
+    console.log(cartArr);
 }
-
-burgerBtn.addEventListener('click', productArr);
-pizzaBtn.addEventListener('click', productArr);
- */
-/* let test = 1;
-function testArr() {
-    
-    
-    if(burgerBtn){
-        cartArr.push('burger');
-        test++;
-        console.log(cartArr);
-        console.log(test);
-    }
-    else if(pizzaBtn){
-        cartArr.push('pizza');
-        test++;
-        console.log(cartArr);
-        console.log(test);
-    }
-    
-    else if(pastaBtn){
-        cartArr.push('pasta');
-        test++;
-        console.log(cartArr);
-        console.log(test);
-    }
-    
-}
-
-burgerBtn.addEventListener('click', testArr);
-pizzaBtn.addEventListener('click', testArr);
-pastaBtn.addEventListener('click',testArr); */
+buttons.forEach(button => button.addEventListener('click', addCart));
