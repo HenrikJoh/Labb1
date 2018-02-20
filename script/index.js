@@ -2,19 +2,19 @@ let food = [{
     name: "Hamburger",
     price: "85kr",
     description: "Big hamburger",
-    url: "burger.jpg"
+    url: "images/burger.jpg"
 },
 {
     name: "Pizza",
     price: "90kr",
     description: "Big pizza",
-    url: "pizza.jpg"
+    url: "images/pizza.jpg"
 },
 {
     name: "Pasta",
     price: "200kr",
     description: "Good pasta",
-    url: "pasta.jpg"
+    url: "images/pasta.jpg"
 }];
 
 function uploadFood () {
