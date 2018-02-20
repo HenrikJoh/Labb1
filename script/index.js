@@ -102,6 +102,7 @@ pastaBtn.addEventListener('click', () => {
 }); */
 let cartArr = [];
 let buttons = document.querySelectorAll('button');
+
 function addCart() {
    
     let item = document.getElementById('cart-items').innerHTML = test;
@@ -113,7 +114,7 @@ function addCart() {
         cartArr.push('Pizza');
         test++
     }
-    else if(this === btnpasta){
+    else {
         cartArr.push('Pasta');
         test++
     }
