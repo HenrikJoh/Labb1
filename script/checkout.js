@@ -65,3 +65,9 @@ myForm.addEventListener('submit', function(e){
         return false;
     }
 });
+
+function getData() {
+   let storedData = localStorage.getItem('testing');
+   let arr = storedData;
+}
+getData();

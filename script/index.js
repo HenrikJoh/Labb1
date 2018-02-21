@@ -59,65 +59,76 @@ let burgerBtn = document.getElementById('btnburger');
 let pizzaBtn = document.getElementById('btnpizza');
 let pastaBtn = document.getElementById('btnpasta');
 
-let test = 1;
+let numb = 1;
 
 //let cartArr = [];
 
 /*
     FUNKAR MEN SKIT!
 burgerBtn.addEventListener('click', () => {
-    let item = document.getElementById('cart-items').innerHTML = test;
+    let item = document.getElementById('cart-items').innerHTML = numb;
     if(burgerBtn){
         cartArr.push('Burger');
-        test++;
+        numb++;
         console.log(cartArr);
-        console.log(test);
+        console.log(numb);
     }
    
     
 });
 
 pizzaBtn.addEventListener('click', () => {
-    let item = document.getElementById('cart-items').innerHTML = test;
+    let item = document.getElementById('cart-items').innerHTML = numb;
     if(pizzaBtn){
         cartArr.push('Pizza');
-        test++;
+        numb++;
         console.log(cartArr);
-        console.log(test);
+        console.log(numb);
     }
    
    
 });
 
 pastaBtn.addEventListener('click', () => {
-    let item = document.getElementById('cart-items').innerHTML = test;
+    let item = document.getElementById('cart-items').innerHTML = numb;
     if(pastaBtn){
         cartArr.push('pasta');
-        test++;
+        numb++;
         console.log(cartArr);
-        console.log(test);
+        console.log(numb);
     }
    
     
 }); */
-let cartArr = [];
+
 let buttons = document.querySelectorAll('button');
 
+let cartArr = [];
 function addCart() {
-   
-    let item = document.getElementById('cart-items').innerHTML = test;
+    
+    let item = document.getElementById('cart-items').innerHTML = numb;
     if(this === btnburger) {
         cartArr.push('Burger');
-        test++;
+        numb++;
         
     }else if (this === btnpizza){
         cartArr.push('Pizza');
-        test++
+        numb++
     }
     else {
         cartArr.push('Pasta');
-        test++
+        numb++
     }
     console.log(cartArr);
+    //localStorage.setItem('cartArr',JSON.stringify(cartArr));
+    saveData();
 }
 buttons.forEach(button => button.addEventListener('click', addCart));
+
+function saveData() {
+    let testing = cartArr;
+    localStorage.setItem('testing',JSON.stringify(testing));
+    
+} 
+
+
